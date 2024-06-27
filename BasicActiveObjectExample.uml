@@ -1729,6 +1729,10 @@ Block waits for Received CAN messages.</body>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_TrwW8DSMEe-iT59wWpEp7Q" name="currentEvent" aggregation="composite">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_U8CboDSjEe-iT59wWpEp7Q" name="PPS_cycle" aggregation="composite">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_ZyBTIDSjEe-iT59wWpEp7Q" value="4"/>
+        </ownedAttribute>
         <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_AjxpIAbcEe-3FI3WuBx1gw" name="aocs_message_dispatcher_thread_Behaviour">
           <language>JAVA</language>
           <body>		/*&#xD;
@@ -1996,7 +2000,7 @@ aocs_message_dispatcher_thread(config);</body>
             <trigger xmi:type="uml:Trigger" xmi:id="_6e_ykDSWEe-iT59wWpEp7Q" event="_ppd_4DSWEe-iT59wWpEp7Q"/>
           </node>
         </ownedBehavior>
-        <ownedBehavior xmi:type="uml:Activity" xmi:id="_mxbNADScEe-iT59wWpEp7Q" name="aocs_message_dispatcher_threadImpl" specification="_N6pdgDSYEe-iT59wWpEp7Q" node="_bFO2MDSdEe-iT59wWpEp7Q _qxodoDSdEe-iT59wWpEp7Q">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_mxbNADScEe-iT59wWpEp7Q" name="aocs_message_dispatcher_threadImpl" specification="_N6pdgDSYEe-iT59wWpEp7Q" node="_bFO2MDSdEe-iT59wWpEp7Q _qxodoDSdEe-iT59wWpEp7Q _ImNj4DSiEe-iT59wWpEp7Q _KCvMQDSiEe-iT59wWpEp7Q _60UE0DSiEe-iT59wWpEp7Q _h-9YADSmEe-iT59wWpEp7Q">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_mxe3YDScEe-iT59wWpEp7Q" name="message">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
@@ -2006,11 +2010,42 @@ aocs_message_dispatcher_thread(config);</body>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_mxfecTScEe-iT59wWpEp7Q" name="event">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_kyIcgDShEe-iT59wWpEp7Q" name="PPS_cycle">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
           <node xmi:type="uml:ActivityParameterNode" xmi:id="_bFO2MDSdEe-iT59wWpEp7Q" name="message" parameter="_N6pdgTSYEe-iT59wWpEp7Q">
             <upperBound xmi:type="uml:LiteralInteger" xmi:id="_bFPdQDSdEe-iT59wWpEp7Q" value="1"/>
           </node>
           <node xmi:type="uml:ActivityParameterNode" xmi:id="_qxodoDSdEe-iT59wWpEp7Q" name="State" parameter="_mxfecDScEe-iT59wWpEp7Q">
             <upperBound xmi:type="uml:LiteralInteger" xmi:id="_qxpEsDSdEe-iT59wWpEp7Q" value="1"/>
+          </node>
+          <node xmi:type="uml:ActivityParameterNode" xmi:id="_ImNj4DSiEe-iT59wWpEp7Q" name="PPS_cycle" parameter="_kyIcgDShEe-iT59wWpEp7Q">
+            <upperBound xmi:type="uml:LiteralInteger" xmi:id="_ImOK8DSiEe-iT59wWpEp7Q" value="1"/>
+          </node>
+          <node xmi:type="uml:ActivityParameterNode" xmi:id="_KCvMQDSiEe-iT59wWpEp7Q" name="Event" parameter="_mxfecTScEe-iT59wWpEp7Q">
+            <upperBound xmi:type="uml:LiteralInteger" xmi:id="_KCvzUDSiEe-iT59wWpEp7Q" value="1"/>
+          </node>
+          <node xmi:type="uml:ReadSelfAction" xmi:id="_60UE0DSiEe-iT59wWpEp7Q" name="self">
+            <result xmi:type="uml:OutputPin" xmi:id="_xk3dQDSjEe-iT59wWpEp7Q" name="context"/>
+          </node>
+          <node xmi:type="uml:CallBehaviorAction" xmi:id="_h-9YADSmEe-iT59wWpEp7Q" name="call&lt;=">
+            <argument xmi:type="uml:InputPin" xmi:id="_M2U78DSnEe-iT59wWpEp7Q" name="x">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_M2U78TSnEe-iT59wWpEp7Q" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M2U78jSnEe-iT59wWpEp7Q" value="1"/>
+            </argument>
+            <argument xmi:type="uml:InputPin" xmi:id="_M2U78zSnEe-iT59wWpEp7Q" name="y">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_M2U79DSnEe-iT59wWpEp7Q" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M2U79TSnEe-iT59wWpEp7Q" value="1"/>
+            </argument>
+            <result xmi:type="uml:OutputPin" xmi:id="_h-9YBzSmEe-iT59wWpEp7Q" name="result">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_h-9YCjSmEe-iT59wWpEp7Q" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_h-9YCDSmEe-iT59wWpEp7Q" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_h-9YCTSmEe-iT59wWpEp7Q" value="1"/>
+            </result>
+            <behavior xmi:type="uml:FunctionBehavior" href="pathmap://PAPYRUS_fUML_LIBRARY/fUML_Library.uml#PrimitiveBehaviors-IntegerFunctions-le"/>
           </node>
         </ownedBehavior>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_cWbTQOnpEe670Kb7sOjz5g" name="AOCS_downlink_telemetry_handler">
@@ -2083,7 +2118,7 @@ Initialise data gathering for new cycle&#xD;
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_N6pdgTSYEe-iT59wWpEp7Q" name="message">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ASldoDSeEe-iT59wWpEp7Q" name="PPS_Cycle">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ASldoDSeEe-iT59wWpEp7Q" name="PPS_cycle">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_fkUGEDScEe-iT59wWpEp7Q" name="state" direction="out">
