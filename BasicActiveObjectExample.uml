@@ -1719,9 +1719,11 @@ Block waits for Received CAN messages.</body>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_pc_OcDRnEe-iT59wWpEp7Q" name="AOCSMessage" aggregation="composite">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_c9rJ4DbfEe-iT59wWpEp7Q" value="eAOCSTimerMessage"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_ATCjsDRpEe-iT59wWpEp7Q" name="PPS_received" aggregation="composite">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_DXGWUDb1Ee-iT59wWpEp7Q"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Port" xmi:id="_Fi2ikDSMEe-iT59wWpEp7Q" name="AOCS_shell_fsm_state" aggregation="composite">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -1987,40 +1989,146 @@ aocs_message_dispatcher_thread(config);</body>
             </result>
           </node>
         </ownedBehavior>
-        <ownedBehavior xmi:type="uml:Activity" xmi:id="_oPR2oDSSEe-iT59wWpEp7Q" name="AOCS_Process_ShellClassifierBehavior" node="_nPy6IDSTEe-iT59wWpEp7Q _pot5UDSTEe-iT59wWpEp7Q _CyINwDSUEe-iT59wWpEp7Q _3PAogDSWEe-iT59wWpEp7Q">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_oPR2oDSSEe-iT59wWpEp7Q" name="AOCS_Process_ShellClassifierBehavior" node="_nPy6IDSTEe-iT59wWpEp7Q _pot5UDSTEe-iT59wWpEp7Q _CyINwDSUEe-iT59wWpEp7Q _3PAogDSWEe-iT59wWpEp7Q _r4U_kDbEEe-iT59wWpEp7Q _ShojcDbMEe-iT59wWpEp7Q _3SHzQDbNEe-iT59wWpEp7Q _Er3PADbjEe-iT59wWpEp7Q _K-j8IDbjEe-iT59wWpEp7Q _qIsGwDbsEe-iT59wWpEp7Q _KlzqoDbzEe-iT59wWpEp7Q">
           <edge xmi:type="uml:ControlFlow" xmi:id="_O41g4DSUEe-iT59wWpEp7Q" target="_CyINwDSUEe-iT59wWpEp7Q" source="_nPy6IDSTEe-iT59wWpEp7Q"/>
-          <edge xmi:type="uml:ControlFlow" xmi:id="_QDpuMDSUEe-iT59wWpEp7Q" target="_3PAogDSWEe-iT59wWpEp7Q" source="_CyINwDSUEe-iT59wWpEp7Q"/>
           <edge xmi:type="uml:ControlFlow" xmi:id="_D_sswDSXEe-iT59wWpEp7Q" target="_pot5UDSTEe-iT59wWpEp7Q" source="_3PAogDSWEe-iT59wWpEp7Q"/>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_l-AnIDbNEe-iT59wWpEp7Q" target="_K-j8IDbjEe-iT59wWpEp7Q" source="_gpmA0DbFEe-iT59wWpEp7Q">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_l-Ii8DbNEe-iT59wWpEp7Q" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_l-Ii8TbNEe-iT59wWpEp7Q" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_oxW4gDbNEe-iT59wWpEp7Q" target="_r4U_kDbEEe-iT59wWpEp7Q" source="_CyINwDSUEe-iT59wWpEp7Q"/>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_A5EjwDbsEe-iT59wWpEp7Q" target="_Et0W0zbjEe-iT59wWpEp7Q" source="_K-j8IDbjEe-iT59wWpEp7Q">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_A5OUwDbsEe-iT59wWpEp7Q" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_A5O70DbsEe-iT59wWpEp7Q" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_LiSlMDbsEe-iT59wWpEp7Q" target="_n1RgMDbMEe-iT59wWpEp7Q" source="_K-j8IDbjEe-iT59wWpEp7Q">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_LidkUDbsEe-iT59wWpEp7Q" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_LidkUTbsEe-iT59wWpEp7Q" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_MdrPYDbsEe-iT59wWpEp7Q" target="_EtzIsDbjEe-iT59wWpEp7Q" source="_q0GBwDbMEe-iT59wWpEp7Q">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_Md8VIDbsEe-iT59wWpEp7Q" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_Md8VITbsEe-iT59wWpEp7Q" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_xOjWMDbsEe-iT59wWpEp7Q" target="_vC8aQDbsEe-iT59wWpEp7Q" source="_K-j8IDbjEe-iT59wWpEp7Q">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_xO2RIDbsEe-iT59wWpEp7Q" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_xO2RITbsEe-iT59wWpEp7Q" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_AD8dIDbtEe-iT59wWpEp7Q" target="_3tlPIDbsEe-iT59wWpEp7Q" source="_gwfj8DbOEe-iT59wWpEp7Q">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_AEOxADbtEe-iT59wWpEp7Q" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_AEOxATbtEe-iT59wWpEp7Q" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_L7Td8DbzEe-iT59wWpEp7Q" target="_KlzqoDbzEe-iT59wWpEp7Q" source="_qIsGwDbsEe-iT59wWpEp7Q"/>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_Px5VADbzEe-iT59wWpEp7Q" target="_N3IRcDbzEe-iT59wWpEp7Q" source="_K-j8IDbjEe-iT59wWpEp7Q">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_PyJzsDbzEe-iT59wWpEp7Q" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_PyJzsTbzEe-iT59wWpEp7Q" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_wf2jgDb0Ee-iT59wWpEp7Q" target="_EtzvwDbjEe-iT59wWpEp7Q" source="_aNi_EDb0Ee-iT59wWpEp7Q">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_wgNI0Db0Ee-iT59wWpEp7Q" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_wgNI0Tb0Ee-iT59wWpEp7Q" value="1"/>
+          </edge>
           <node xmi:type="uml:InitialNode" xmi:id="_nPy6IDSTEe-iT59wWpEp7Q" name="InitialNode1" outgoing="_O41g4DSUEe-iT59wWpEp7Q"/>
           <node xmi:type="uml:ActivityFinalNode" xmi:id="_pot5UDSTEe-iT59wWpEp7Q" name="ActivityFinalNode1" incoming="_D_sswDSXEe-iT59wWpEp7Q"/>
-          <node xmi:type="uml:AcceptEventAction" xmi:id="_CyINwDSUEe-iT59wWpEp7Q" name="PPS_Timer_AcceptEventAction" incoming="_O41g4DSUEe-iT59wWpEp7Q" outgoing="_QDpuMDSUEe-iT59wWpEp7Q">
+          <node xmi:type="uml:AcceptEventAction" xmi:id="_CyINwDSUEe-iT59wWpEp7Q" name="PPS_Timer_AcceptEventAction" incoming="_O41g4DSUEe-iT59wWpEp7Q" outgoing="_oxW4gDbNEe-iT59wWpEp7Q">
             <trigger xmi:type="uml:Trigger" xmi:id="_JW9MsDSUEe-iT59wWpEp7Q" event="_m3Ct0DSREe-iT59wWpEp7Q"/>
           </node>
-          <node xmi:type="uml:AcceptEventAction" xmi:id="_3PAogDSWEe-iT59wWpEp7Q" name="Actuation_Timer_AcceptEventAction" incoming="_QDpuMDSUEe-iT59wWpEp7Q" outgoing="_D_sswDSXEe-iT59wWpEp7Q">
+          <node xmi:type="uml:AcceptEventAction" xmi:id="_3PAogDSWEe-iT59wWpEp7Q" name="Actuation_Timer_AcceptEventAction" outgoing="_D_sswDSXEe-iT59wWpEp7Q">
             <trigger xmi:type="uml:Trigger" xmi:id="_6e_ykDSWEe-iT59wWpEp7Q" event="_ppd_4DSWEe-iT59wWpEp7Q"/>
           </node>
+          <node xmi:type="uml:ReadSelfAction" xmi:id="_r4U_kDbEEe-iT59wWpEp7Q" name="ReadSelfAction1" incoming="_oxW4gDbNEe-iT59wWpEp7Q">
+            <result xmi:type="uml:OutputPin" xmi:id="_gpmA0DbFEe-iT59wWpEp7Q" name="result" outgoing="_l-AnIDbNEe-iT59wWpEp7Q" type="_EbAfUOUwEe670Kb7sOjz5g"/>
+          </node>
+          <node xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_ShojcDbMEe-iT59wWpEp7Q" name="readAOCSMessage" structuralFeature="_pc_OcDRnEe-iT59wWpEp7Q">
+            <object xmi:type="uml:InputPin" xmi:id="_n1RgMDbMEe-iT59wWpEp7Q" name="object" incoming="_LiSlMDbsEe-iT59wWpEp7Q"/>
+            <result xmi:type="uml:OutputPin" xmi:id="_q0GBwDbMEe-iT59wWpEp7Q" name="_aocs_message.aocs_message_type" outgoing="_MdrPYDbsEe-iT59wWpEp7Q">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </result>
+          </node>
+          <node xmi:type="uml:ValueSpecificationAction" xmi:id="_3SHzQDbNEe-iT59wWpEp7Q" name="5">
+            <result xmi:type="uml:OutputPin" xmi:id="_gwfj8DbOEe-iT59wWpEp7Q" name="result" outgoing="_AD8dIDbtEe-iT59wWpEp7Q">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </result>
+            <value xmi:type="uml:LiteralInteger" xmi:id="_onqUgDbOEe-iT59wWpEp7Q" value="5"/>
+          </node>
+          <node xmi:type="uml:CallOperationAction" xmi:id="_Er3PADbjEe-iT59wWpEp7Q" name="callAocs_message_dispatcher_thread" operation="_N6pdgDSYEe-iT59wWpEp7Q">
+            <argument xmi:type="uml:InputPin" xmi:id="_EtzIsDbjEe-iT59wWpEp7Q" name="message" incoming="_MdrPYDbsEe-iT59wWpEp7Q">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EtzIsTbjEe-iT59wWpEp7Q" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EtzIsjbjEe-iT59wWpEp7Q" value="1"/>
+            </argument>
+            <argument xmi:type="uml:InputPin" xmi:id="_EtzvwDbjEe-iT59wWpEp7Q" name="PPS_cycle" incoming="_wf2jgDb0Ee-iT59wWpEp7Q">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EtzvwTbjEe-iT59wWpEp7Q" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EtzvwjbjEe-iT59wWpEp7Q" value="1"/>
+            </argument>
+            <result xmi:type="uml:OutputPin" xmi:id="_EtzvwzbjEe-iT59wWpEp7Q" name="state">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EtzvxDbjEe-iT59wWpEp7Q" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EtzvxTbjEe-iT59wWpEp7Q" value="1"/>
+            </result>
+            <result xmi:type="uml:OutputPin" xmi:id="_Et0W0DbjEe-iT59wWpEp7Q" name="event">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Et0W0TbjEe-iT59wWpEp7Q" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Et0W0jbjEe-iT59wWpEp7Q" value="1"/>
+            </result>
+            <target xmi:type="uml:InputPin" xmi:id="_Et0W0zbjEe-iT59wWpEp7Q" name="target" incoming="_A5EjwDbsEe-iT59wWpEp7Q" type="_EbAfUOUwEe670Kb7sOjz5g">
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Et0W1DbjEe-iT59wWpEp7Q" value="1"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Et0W1TbjEe-iT59wWpEp7Q" value="1"/>
+            </target>
+          </node>
+          <node xmi:type="uml:ForkNode" xmi:id="_K-j8IDbjEe-iT59wWpEp7Q" name="ForkNode1" incoming="_l-AnIDbNEe-iT59wWpEp7Q" outgoing="_A5EjwDbsEe-iT59wWpEp7Q _LiSlMDbsEe-iT59wWpEp7Q _xOjWMDbsEe-iT59wWpEp7Q _Px5VADbzEe-iT59wWpEp7Q"/>
+          <node xmi:type="uml:AddStructuralFeatureValueAction" xmi:id="_qIsGwDbsEe-iT59wWpEp7Q" name="setPPS_received" outgoing="_L7Td8DbzEe-iT59wWpEp7Q" structuralFeature="_ATCjsDRpEe-iT59wWpEp7Q">
+            <object xmi:type="uml:InputPin" xmi:id="_vC8aQDbsEe-iT59wWpEp7Q" name="target" incoming="_xOjWMDbsEe-iT59wWpEp7Q" type="_EbAfUOUwEe670Kb7sOjz5g"/>
+            <result xmi:type="uml:OutputPin" xmi:id="_ELObkDbtEe-iT59wWpEp7Q" name="result" type="_EbAfUOUwEe670Kb7sOjz5g"/>
+            <value xmi:type="uml:InputPin" xmi:id="_3tlPIDbsEe-iT59wWpEp7Q" name="value" incoming="_AD8dIDbtEe-iT59wWpEp7Q">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </value>
+          </node>
+          <node xmi:type="uml:ReadStructuralFeatureAction" xmi:id="_KlzqoDbzEe-iT59wWpEp7Q" name="readPPS_received" incoming="_L7Td8DbzEe-iT59wWpEp7Q" structuralFeature="_ATCjsDRpEe-iT59wWpEp7Q">
+            <object xmi:type="uml:InputPin" xmi:id="_N3IRcDbzEe-iT59wWpEp7Q" name="object" incoming="_Px5VADbzEe-iT59wWpEp7Q" type="_EbAfUOUwEe670Kb7sOjz5g"/>
+            <result xmi:type="uml:OutputPin" xmi:id="_aNi_EDb0Ee-iT59wWpEp7Q" name="pps" outgoing="_wf2jgDb0Ee-iT59wWpEp7Q">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </result>
+          </node>
         </ownedBehavior>
-        <ownedBehavior xmi:type="uml:Activity" xmi:id="_mxbNADScEe-iT59wWpEp7Q" name="aocs_message_dispatcher_threadImpl" specification="_N6pdgDSYEe-iT59wWpEp7Q" node="_bFO2MDSdEe-iT59wWpEp7Q _qxodoDSdEe-iT59wWpEp7Q _ImNj4DSiEe-iT59wWpEp7Q _KCvMQDSiEe-iT59wWpEp7Q _60UE0DSiEe-iT59wWpEp7Q _h-9YADSmEe-iT59wWpEp7Q">
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_mxe3YDScEe-iT59wWpEp7Q" name="message">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_mxfecDScEe-iT59wWpEp7Q" name="state" direction="out">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_mxfecTScEe-iT59wWpEp7Q" name="event">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </ownedParameter>
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_mxbNADScEe-iT59wWpEp7Q" name="aocs_message_dispatcher_threadImpl" specification="_N6pdgDSYEe-iT59wWpEp7Q" node="_bFO2MDSdEe-iT59wWpEp7Q _qxodoDSdEe-iT59wWpEp7Q _KCvMQDSiEe-iT59wWpEp7Q _60UE0DSiEe-iT59wWpEp7Q _S6dJkDbAEe-iT59wWpEp7Q _5NXOYDbBEe-iT59wWpEp7Q _08HgADbfEe-iT59wWpEp7Q _l-7F8Db1Ee-iT59wWpEp7Q" group="_5NXOYDbBEe-iT59wWpEp7Q _9c5w8DbBEe-iT59wWpEp7Q _-R4RIDbBEe-iT59wWpEp7Q _-z6nMDbBEe-iT59wWpEp7Q">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_kyIcgDShEe-iT59wWpEp7Q" name="PPS_cycle">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
-          <node xmi:type="uml:ActivityParameterNode" xmi:id="_bFO2MDSdEe-iT59wWpEp7Q" name="message" parameter="_N6pdgTSYEe-iT59wWpEp7Q">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_mxe3YDScEe-iT59wWpEp7Q" name="message">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_mxfecDScEe-iT59wWpEp7Q" name="state" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_mxfecTScEe-iT59wWpEp7Q" name="event" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_6OkzwDbBEe-iT59wWpEp7Q" target="_5NXOYDbBEe-iT59wWpEp7Q" source="_S6dJkDbAEe-iT59wWpEp7Q">
+            <guard xmi:type="uml:LiteralString" xmi:id="_e_kPUDbCEe-iT59wWpEp7Q" value="eAOCSTimerMessage"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_Xo3ukDbCEe-iT59wWpEp7Q" target="_9c5w8DbBEe-iT59wWpEp7Q" source="_S6dJkDbAEe-iT59wWpEp7Q">
+            <guard xmi:type="uml:LiteralString" xmi:id="_wM5eADbCEe-iT59wWpEp7Q" value="ePPSTimerMessage"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_YWUqcDbCEe-iT59wWpEp7Q" target="_-R4RIDbBEe-iT59wWpEp7Q" source="_S6dJkDbAEe-iT59wWpEp7Q">
+            <guard xmi:type="uml:LiteralString" xmi:id="__RwkUDbCEe-iT59wWpEp7Q" value="eActuationTimerMessage"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_Y6ix0DbCEe-iT59wWpEp7Q" target="_-z6nMDbBEe-iT59wWpEp7Q" source="_S6dJkDbAEe-iT59wWpEp7Q">
+            <guard xmi:type="uml:LiteralString" xmi:id="_BK0-wDbDEe-iT59wWpEp7Q" value="eAimCheckTimerMessage"/>
+          </edge>
+          <edge xmi:type="uml:ObjectFlow" xmi:id="_X1Y_cDb1Ee-iT59wWpEp7Q" target="_S6dJkDbAEe-iT59wWpEp7Q" source="_bFO2MDSdEe-iT59wWpEp7Q">
+            <guard xmi:type="uml:LiteralBoolean" xmi:id="_X1g7QDb1Ee-iT59wWpEp7Q" value="true"/>
+            <weight xmi:type="uml:LiteralInteger" xmi:id="_X1hiUDb1Ee-iT59wWpEp7Q" value="1"/>
+          </edge>
+          <edge xmi:type="uml:ControlFlow" xmi:id="_nIR6sDb1Ee-iT59wWpEp7Q" target="_l-7F8Db1Ee-iT59wWpEp7Q" source="_08HgADbfEe-iT59wWpEp7Q"/>
+          <structuredNode xmi:type="uml:StructuredActivityNode" xmi:id="_5NXOYDbBEe-iT59wWpEp7Q" name="StructuredActivityNode1" incoming="_6OkzwDbBEe-iT59wWpEp7Q"/>
+          <group xmi:type="uml:StructuredActivityNode" xmi:id="_9c5w8DbBEe-iT59wWpEp7Q" name="CopyOf_StructuredActivityNode1_1" incoming="_Xo3ukDbCEe-iT59wWpEp7Q"/>
+          <group xmi:type="uml:StructuredActivityNode" xmi:id="_-R4RIDbBEe-iT59wWpEp7Q" name="CopyOf_StructuredActivityNode1_2" incoming="_YWUqcDbCEe-iT59wWpEp7Q"/>
+          <group xmi:type="uml:StructuredActivityNode" xmi:id="_-z6nMDbBEe-iT59wWpEp7Q" name="CopyOf_StructuredActivityNode1_3" incoming="_Y6ix0DbCEe-iT59wWpEp7Q"/>
+          <node xmi:type="uml:ActivityParameterNode" xmi:id="_bFO2MDSdEe-iT59wWpEp7Q" name="message" outgoing="_X1Y_cDb1Ee-iT59wWpEp7Q" parameter="_N6pdgTSYEe-iT59wWpEp7Q">
             <upperBound xmi:type="uml:LiteralInteger" xmi:id="_bFPdQDSdEe-iT59wWpEp7Q" value="1"/>
           </node>
           <node xmi:type="uml:ActivityParameterNode" xmi:id="_qxodoDSdEe-iT59wWpEp7Q" name="State" parameter="_mxfecDScEe-iT59wWpEp7Q">
             <upperBound xmi:type="uml:LiteralInteger" xmi:id="_qxpEsDSdEe-iT59wWpEp7Q" value="1"/>
-          </node>
-          <node xmi:type="uml:ActivityParameterNode" xmi:id="_ImNj4DSiEe-iT59wWpEp7Q" name="PPS_cycle" parameter="_kyIcgDShEe-iT59wWpEp7Q">
-            <upperBound xmi:type="uml:LiteralInteger" xmi:id="_ImOK8DSiEe-iT59wWpEp7Q" value="1"/>
           </node>
           <node xmi:type="uml:ActivityParameterNode" xmi:id="_KCvMQDSiEe-iT59wWpEp7Q" name="Event" parameter="_mxfecTScEe-iT59wWpEp7Q">
             <upperBound xmi:type="uml:LiteralInteger" xmi:id="_KCvzUDSiEe-iT59wWpEp7Q" value="1"/>
@@ -2028,25 +2136,11 @@ aocs_message_dispatcher_thread(config);</body>
           <node xmi:type="uml:ReadSelfAction" xmi:id="_60UE0DSiEe-iT59wWpEp7Q" name="self">
             <result xmi:type="uml:OutputPin" xmi:id="_xk3dQDSjEe-iT59wWpEp7Q" name="context"/>
           </node>
-          <node xmi:type="uml:CallBehaviorAction" xmi:id="_h-9YADSmEe-iT59wWpEp7Q" name="call&lt;=">
-            <argument xmi:type="uml:InputPin" xmi:id="_M2U78DSnEe-iT59wWpEp7Q" name="x">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_M2U78TSnEe-iT59wWpEp7Q" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M2U78jSnEe-iT59wWpEp7Q" value="1"/>
-            </argument>
-            <argument xmi:type="uml:InputPin" xmi:id="_M2U78zSnEe-iT59wWpEp7Q" name="y">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_M2U79DSnEe-iT59wWpEp7Q" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M2U79TSnEe-iT59wWpEp7Q" value="1"/>
-            </argument>
-            <result xmi:type="uml:OutputPin" xmi:id="_h-9YBzSmEe-iT59wWpEp7Q" name="result">
-              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-              <upperBound xmi:type="uml:LiteralInteger" xmi:id="_h-9YCjSmEe-iT59wWpEp7Q" value="1"/>
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_h-9YCDSmEe-iT59wWpEp7Q" value="1"/>
-              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_h-9YCTSmEe-iT59wWpEp7Q" value="1"/>
-            </result>
-            <behavior xmi:type="uml:FunctionBehavior" href="pathmap://PAPYRUS_fUML_LIBRARY/fUML_Library.uml#PrimitiveBehaviors-IntegerFunctions-le"/>
+          <node xmi:type="uml:DecisionNode" xmi:id="_S6dJkDbAEe-iT59wWpEp7Q" name="_aocs_message.aocs_message_type" incoming="_X1Y_cDb1Ee-iT59wWpEp7Q" outgoing="_6OkzwDbBEe-iT59wWpEp7Q _Xo3ukDbCEe-iT59wWpEp7Q _YWUqcDbCEe-iT59wWpEp7Q _Y6ix0DbCEe-iT59wWpEp7Q"/>
+          <node xmi:type="uml:ActivityParameterNode" xmi:id="_08HgADbfEe-iT59wWpEp7Q" name="PPS_cycle" outgoing="_nIR6sDb1Ee-iT59wWpEp7Q" parameter="_kyIcgDShEe-iT59wWpEp7Q">
+            <upperBound xmi:type="uml:LiteralInteger" xmi:id="_08HgATbfEe-iT59wWpEp7Q" value="1"/>
           </node>
+          <node xmi:type="uml:ActivityFinalNode" xmi:id="_l-7F8Db1Ee-iT59wWpEp7Q" name="ActivityFinalNode1" incoming="_nIR6sDb1Ee-iT59wWpEp7Q"/>
         </ownedBehavior>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_cWbTQOnpEe670Kb7sOjz5g" name="AOCS_downlink_telemetry_handler">
           <ownedComment xmi:type="uml:Comment" xmi:id="_vQqvsOnpEe670Kb7sOjz5g" annotatedElement="_cWbTQOnpEe670Kb7sOjz5g">
@@ -2121,10 +2215,10 @@ Initialise data gathering for new cycle&#xD;
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_ASldoDSeEe-iT59wWpEp7Q" name="PPS_cycle">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_fkUGEDScEe-iT59wWpEp7Q" name="state" direction="out">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_fkUGEDScEe-iT59wWpEp7Q" name="state" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
-          <ownedParameter xmi:type="uml:Parameter" xmi:id="_h_HUkDScEe-iT59wWpEp7Q" name="event">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_h_HUkDScEe-iT59wWpEp7Q" name="event" direction="return">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedParameter>
         </ownedOperation>
