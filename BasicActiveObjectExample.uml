@@ -2350,7 +2350,7 @@ activity AOCS_Shell_process_eventActivityImpl(in event: String,&#xD;
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </result>
           </node>
-          <node xmi:type="uml:MergeNode" xmi:id="_MM0RQDlPEe-QQpQ6ahsJhA" name="MergeNode1" incoming="_l_RRkDkhEe-iT59wWpEp7Q _8xPJgDlNEe-QQpQ6ahsJhA __YtiEDlNEe-QQpQ6ahsJhA" outgoing="_P2TgcDlPEe-QQpQ6ahsJhA"/>
+          <node xmi:type="uml:MergeNode" xmi:id="_MM0RQDlPEe-QQpQ6ahsJhA" name="Merge" incoming="_l_RRkDkhEe-iT59wWpEp7Q _8xPJgDlNEe-QQpQ6ahsJhA __YtiEDlNEe-QQpQ6ahsJhA" outgoing="_P2TgcDlPEe-QQpQ6ahsJhA"/>
         </ownedBehavior>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_cWbTQOnpEe670Kb7sOjz5g" name="AOCS_downlink_telemetry_handler">
           <ownedComment xmi:type="uml:Comment" xmi:id="_vQqvsOnpEe670Kb7sOjz5g" annotatedElement="_cWbTQOnpEe670Kb7sOjz5g">
