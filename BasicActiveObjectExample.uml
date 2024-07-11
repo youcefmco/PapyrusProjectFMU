@@ -2486,7 +2486,7 @@ activity AOCS_Shell_process_eventActivityImpl(in event: String,&#xD;
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
             </result>
           </node>
-          <node xmi:type="uml:AddStructuralFeatureValueAction" xmi:id="_Wkq1oD7QEe-YKstL0vxv_A" name="setPPS_received" outgoing="_AJSi0D7SEe-YKstL0vxv_A" structuralFeature="_ATCjsDRpEe-iT59wWpEp7Q">
+          <node xmi:type="uml:AddStructuralFeatureValueAction" xmi:id="_Wkq1oD7QEe-YKstL0vxv_A" name="setPPS_received" outgoing="_AJSi0D7SEe-YKstL0vxv_A" structuralFeature="_ATCjsDRpEe-iT59wWpEp7Q" isReplaceAll="true">
             <object xmi:type="uml:InputPin" xmi:id="_1pXnUD7REe-YKstL0vxv_A" name="target" incoming="_8iVDMD7REe-YKstL0vxv_A" type="_EbAfUOUwEe670Kb7sOjz5g"/>
             <result xmi:type="uml:OutputPin" xmi:id="_hxjS4D7SEe-YKstL0vxv_A" name="result" type="_EbAfUOUwEe670Kb7sOjz5g"/>
             <value xmi:type="uml:InputPin" xmi:id="_vDrFsD7REe-YKstL0vxv_A" name="value" incoming="_d6XT8D-YEe-ERJ8v4Q29Fg"/>
@@ -2496,7 +2496,7 @@ activity AOCS_Shell_process_eventActivityImpl(in event: String,&#xD;
           <node xmi:type="uml:ForkNode" xmi:id="_cEZ34D-YEe-ERJ8v4Q29Fg" name="Fork" incoming="_xkHpMD7REe-YKstL0vxv_A" outgoing="_d6XT8D-YEe-ERJ8v4Q29Fg _39z80D-aEe-ERJ8v4Q29Fg"/>
           <node xmi:type="uml:DecisionNode" xmi:id="_ID0pAD-ZEe-ERJ8v4Q29Fg" name="Decision" incoming="_G9BHED-bEe-ERJ8v4Q29Fg" outgoing="_PDRR8D-aEe-ERJ8v4Q29Fg _Fv-PsD-cEe-ERJ8v4Q29Fg"/>
           <node xmi:type="uml:JoinNode" xmi:id="_LtwkID-ZEe-ERJ8v4Q29Fg" name="Join" incoming="_AJSi0D7SEe-YKstL0vxv_A _GcLOYD-cEe-ERJ8v4Q29Fg" outgoing="_Q0emUD-ZEe-ERJ8v4Q29Fg"/>
-          <node xmi:type="uml:AddStructuralFeatureValueAction" xmi:id="_i09wQD-ZEe-ERJ8v4Q29Fg" name="setAOCS_shell_fsm_event" outgoing="_c0kpMD-bEe-ERJ8v4Q29Fg" structuralFeature="_TrwW8DSMEe-iT59wWpEp7Q">
+          <node xmi:type="uml:AddStructuralFeatureValueAction" xmi:id="_i09wQD-ZEe-ERJ8v4Q29Fg" name="setAOCS_shell_fsm_event" outgoing="_c0kpMD-bEe-ERJ8v4Q29Fg" structuralFeature="_TrwW8DSMEe-iT59wWpEp7Q" isReplaceAll="true">
             <object xmi:type="uml:InputPin" xmi:id="_8LJ8cD-ZEe-ERJ8v4Q29Fg" name="target" incoming="_QT3hsD-bEe-ERJ8v4Q29Fg" type="_EbAfUOUwEe670Kb7sOjz5g"/>
             <result xmi:type="uml:OutputPin" xmi:id="_Dh_AED-aEe-ERJ8v4Q29Fg" name="result" type="_EbAfUOUwEe670Kb7sOjz5g"/>
             <value xmi:type="uml:InputPin" xmi:id="_6hlWkD-ZEe-ERJ8v4Q29Fg" name="value" incoming="_XYGZcD-bEe-ERJ8v4Q29Fg">
