@@ -3076,7 +3076,7 @@ Initialise data gathering for new cycle&#xD;
         <ownedBehavior xmi:type="uml:Activity" xmi:id="_hh7LkEjPEe-bhKaepO2SmA" name="CANA_send_datagramImpl" specification="_tYjHMAu5Ee-3FI3WuBx1gw">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_hiE8kEjPEe-bhKaepO2SmA" name="CANS_datagram" type="_zCQhsAu5Ee-3FI3WuBx1gw"/>
         </ownedBehavior>
-        <ownedBehavior xmi:type="uml:Activity" xmi:id="_9vUGMEkCEe-bhKaepO2SmA" name="AOCS_TTC_Factory" node="_9vVUUUkCEe-bhKaepO2SmA _9veeQEkCEe-bhKaepO2SmA _9vfFUkkCEe-bhKaepO2SmA">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_9vUGMEkCEe-bhKaepO2SmA" name="AOCS_TTC_Factory" node="_9vVUUUkCEe-bhKaepO2SmA _9veeQEkCEe-bhKaepO2SmA _9vfFUkkCEe-bhKaepO2SmA _UymJsEkFEe-bhKaepO2SmA">
           <ownedParameter xmi:type="uml:Parameter" xmi:id="_9vVUUEkCEe-bhKaepO2SmA" name="result" type="_MeV70OqPEe670Kb7sOjz5g" direction="return"/>
           <edge xmi:type="uml:ObjectFlow" xmi:id="_9vfsY0kCEe-bhKaepO2SmA" name="createObjectAction to callConstructor" target="_9vfFU0kCEe-bhKaepO2SmA" source="_9vfFUEkCEe-bhKaepO2SmA">
             <guard xmi:type="uml:LiteralBoolean" xmi:id="_9wFiQEkCEe-bhKaepO2SmA" value="true"/>
@@ -3101,6 +3101,9 @@ Initialise data gathering for new cycle&#xD;
             <target xmi:type="uml:InputPin" xmi:id="_9vfFU0kCEe-bhKaepO2SmA" name="target" incoming="_9vfsY0kCEe-bhKaepO2SmA" type="_MeV70OqPEe670Kb7sOjz5g">
               <upperBound xmi:type="uml:LiteralInteger" xmi:id="_9vfsYEkCEe-bhKaepO2SmA" value="1"/>
             </target>
+          </node>
+          <node xmi:type="uml:ActivityParameterNode" xmi:id="_UymJsEkFEe-bhKaepO2SmA" name="Result" parameter="_9vVUUEkCEe-bhKaepO2SmA">
+            <upperBound xmi:type="uml:LiteralInteger" xmi:id="_UymJsUkFEe-bhKaepO2SmA" value="1"/>
           </node>
         </ownedBehavior>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_yNJZEAuBEe-3FI3WuBx1gw" name="CANA_send_tc">
